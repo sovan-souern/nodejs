@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Teacher_1 = require("./Teacher");
+const Student_1 = require("./Student");
+const UserInterface_1 = require("./UserInterface");
+const ui = new UserInterface_1.UserInterface();
+ui.displayLogin();
+const teacher = new Teacher_1.Teacher("Mr. Chan");
+const student = new Student_1.Student("Sokha");
+// const admin = new Admin("Admin1", ["add", "delete", "update"]);
+student.login();
+teacher.login();
+// admin.login();
+ui.displayMenu();
+student.askPermission(teacher, ui);
+// admin.manageUsers();
